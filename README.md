@@ -43,26 +43,26 @@ _Actions_ in CK are functionalities offered by modules to operate on CK entries.
 
 Every command line in CK has the same basic form to perform an action of a particular module:
 <pre>
-ck _action_ _**module**_
+ck <i>action</i> <i><b>module</b></i>
 </pre>
 
 Therefore, we write: `ck compile program`, `ck add_file_to dataset`, `ck rerun experiment`, and so on.
 
-This style is deliberately designed so that the commands read like sentences. I call this <code>ck _action_ _**module**_</code> structure the _grammar_ of CK.
+This style is deliberately designed so that the commands read like sentences. I call this <code>ck <i>action</i> <i><b>module</b></i></code> structure the _grammar_ of CK.
 
 CK commands which talk about particular entries specify them by using the following notation:
 <pre>
-ck _action_ _**module**_:_**entry**_
+ck <i>action</i> <i><b>module</b></i>:<i><b>entry</b></i>
 </pre>
 
 Sometimes it is required to help CK distinguish between entries in different repositories. In these cases we have to write:
 <pre>
-ck _action_ _**repository**_:_**module**_:_**entry**_
+ck <i>action</i> <i><b>repository</b></i>:<i><b>module</b></i>:<i><b>entry</b></i>
 </pre>
 
 Many modules allow to specify additional options as command line flags. You can get a full list of supported actions by calling on a particular module:
 <pre>
-ck help _**module**_
+ck help <i><b>module</b></i>
 </pre>
 
 ## CK modules for managing repositories and modules
@@ -100,7 +100,7 @@ ck list module --repo_uoa=ck-autotuning
 </pre>
 
 The `--repo_uoa=ck-autotuning` part is an _input argument_ passed to the `list` action of the module `module`. To list all the possible input arguments of an action call:
-<code>ck _action_ _**module**_ --help</code>.
+<code>ck <i>action</i> <i><b>module</b></i> --help</code>.
 So for example: `ck list module --help`. This will print a description of the action and which input arguments it will process and what output it will return.
 
 
@@ -111,16 +111,16 @@ Furthermore, you can always call `ck action module --help` to get learn about th
 
 Many of the common actions are for managing ck entries, the most important of them are:
 
-- <code>ck add ***module***:***entry***</code> adds a new ck entry called ***`entry`*** to the module named ***`module`***.
-- <code>ck cp ***module1***:***entry1*** ***module2***:***entry2***</code> copies ck entry called ***`entry1`*** from ***`module1`*** into ***`entry2`*** in ***`module2`***.
+- <code>ck add <i><b>module</b></i>:<i><b>entry</b></i></code> adds a new ck entry called ***`entry`*** to the module named ***`module`***.
+- <code>ck cp <i><b>module1</b></i>:<i><b>entry1</b></i> <i><b>module2</b></i>:<i><b>entry2</b></i></code> copies ck entry called ***`entry1`*** from ***`module1`*** into ***`entry2`*** in ***`module2`***.
 - <code>ck find ***module***:***entry***</code> prints the path of the ck entry named ***`entry`*** from module ***`module`***.
-- <code>ck mv ***module1***:***entry1*** ***module2***:***entry2***</code> moves ck entry called ***`entry1`*** from ***`module1`*** to ***`entry2`*** in ***`module2`***.
-- <code>ck rm ***module***:***entry***</code> removes (deletes) an existing ck entry called ***`entry`*** from the module named ***`module`***.
+- <code>ck mv <i><b>module1</b></i>:<i><b>entry1</b></i> <i><b>module2</b></i>:<i><b>entry2</b></i></code> moves ck entry called ***`entry1`*** from ***`module1`*** to ***`entry2`*** in ***`module2`***.
+- <code>ck rm <i><b>module</b></i>:<i><b>entry</b></i></code> removes (deletes) an existing ck entry called ***`entry`*** from the module named ***`module`***.
 
 ## Where to go from here?
 I only scratched the surface of CK. I haven't talked about the meta data format (which is `JSON`) and the implementation of your own custom modules (which is commonly done in Python).
 
-As I said in the beginning, there is plenty of documentation available on the [CK wiki](https://github.com/ctuning/ck/wiki/). It is incredible useful to keep the _vocabulary_ (_entries_, _repositories_, _modules_) and the _grammar_ (<code>ck _action_ _**module**_</code>) of CK in mind while reading these documents and start playing around with CK.
+As I said in the beginning, there is plenty of documentation available on the [CK wiki](https://github.com/ctuning/ck/wiki/). It is incredible useful to keep the _vocabulary_ (_entries_, _repositories_, _modules_) and the _grammar_ (<code>ck <i>action</i> <i><b>module</b></i></code>) of CK in mind while reading these documents and start playing around with CK.
 
 The two most appropriate starting points are the [Getting Started Guide](https://github.com/ctuning/ck/wiki/Getting-started-guide) and the [Portable Workflows](https://github.com/ctuning/ck/wiki/Portable-workflows) page.
 
