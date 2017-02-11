@@ -1,6 +1,6 @@
 # CK: Collective Knowledge
 
-This blog post give a brief introduction into CK and it's basic concepts. There is a ton of existing documentation out there in the [CK wiki on GitHub](https://github.com/ctuning/ck/wiki). All of this documentation can easily feel overwhelming. This is why I wrote this deliberately short and lightweight introduction into some of the fundamental basic concepts of CK, which helped me a lot in understanding CK.
+This blog post gives a brief introduction into CK and its basic concepts. There is a ton of existing documentation out there in the [CK wiki on GitHub](https://github.com/ctuning/ck/wiki). All of this documentation can easily feel overwhelming. This is why I wrote this deliberately short and lightweight introduction into some of the fundamental basic concepts of CK, which helped me a lot in understanding CK.
 
 I assume that you have the CK tool installed on your machine, which you can easily check by running `ck version`. If this returns an error you want to install CK by running `pip install ck` [^1].
 
