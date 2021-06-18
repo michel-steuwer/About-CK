@@ -136,4 +136,3 @@ For learning how to implement portable workflows with CK, by
 read the corresponding sections in the [Portable Workflows](https://github.com/ctuning/ck/wiki/Portable-workflows) page.
 
 Also, ask questions on the [CK mailing list](https://groups.google.com/forum/#!forum/collective-knowledge). The community is very much open to answer your questions!
-
